@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            border:10px;
+        }
+    </style>
+</head>
+<script src="js/jquery.min.js"></script>
+<body>
+<form id="form" method="post" action="file/upload" enctype="multipart/form-data">
+    <div>
+        <label>
+            <input type="text" id="name">
+        </label>
+    </div>
+    <div>
+        <label>文件</label>
+        <input type="file" id="file" name="file">
+    </div>
+    <div>
+        <label>h5上传</label>
+
+        <input type="file" multiple="" webkitdirectory="" accept="*/*" name="a">
+    </div>
+    <div  class="box"><p  class="box" style="color: #0C0C0C;font-size: 15px">点此选择或拖拽<span style="color:#F00">文件夹</span></p></div>
+    <input type="submit" value="提交">
+</form>
+
+<script>
+    var box = document.querySelector('.box');
+    //鼠标拖拽进入该区域
+    box.addEventListener('dragenter', function () {
+        box.innerHTML = '松开鼠标';     //区域内样式变化
+    }, false);
+
+    //鼠标拖拽离开该区域
+    box.addEventListener('dragleave', function () {
+        box.innerHTML = '请将文件拖至此区域'      //区域内变回原来样式
+    }, false);
+
+    //只要鼠标拖拽悬停在该区域就会触发
+    box.addEventListener('dragover', function (e) {
+        e.preventDefault();     //注意，如果dragover不阻止默认事件，drop事件就不会触发
+        console.log('dragover');
+    }, false);
+
+    //鼠标拖拽释放
+    box.addEventListener('drop', function (e) {
+        e.preventDefault();     //浏览器默认会打开该文件，因此停掉该默认事件
+        console.log(e.dataTransfer.files);      //选中的文件
+    }, false);
+</script>
+</body>
+</html>
