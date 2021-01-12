@@ -5,7 +5,13 @@ import org.junit.Test;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
-
+/**
+* @Description: TODO(Socket通信)
+* @Param: 
+* @return: 
+* @Author: zcx
+* @Date: 2021/1/6 15:18
+*/
 public class Socket {
     @Test
     public void client() {

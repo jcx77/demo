@@ -1,4 +1,4 @@
-package clazz;
+package Model;
 
 public class Person {
     private String name;
