@@ -32,4 +32,7 @@ public class SuperStream {
         //映射
         new Data().getList().stream().map(Person::getName).filter(s -> s.length()>2).forEach(System.out::println);
     }
+    public void test(){
+
+    }
 }
