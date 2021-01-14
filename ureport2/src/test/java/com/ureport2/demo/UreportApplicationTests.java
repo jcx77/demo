@@ -2,6 +2,7 @@ package com.ureport2.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import util.UUIDHelper;
 
 import java.math.BigDecimal;
 
@@ -13,8 +14,9 @@ class UreportApplicationTests {
     }
 
     public static void main(String[] args) {
-        String a = "1";
-        char[] b = a.toCharArray();
-        System.out.println(new BigDecimal("4efwsa"));
+        //String a = "1";
+        //char[] b = a.toCharArray();
+        //System.out.println(new BigDecimal("4efwsa"));
+        System.out.println(UUIDHelper.get32UUID());
     }
 }
