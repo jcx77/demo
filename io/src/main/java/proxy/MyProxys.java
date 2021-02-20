@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * @Author: zcx
  * @Date: 2021/1/11 11:20
  */
-public class Proxy {
+public class MyProxys {
 
     public static void main(String[] args) {
         Factory f = (Factory)ProxyFactory.getProxyInstance(new Nike());

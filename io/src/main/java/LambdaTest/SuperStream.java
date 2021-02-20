@@ -19,13 +19,13 @@ public class SuperStream {
     @Test
     public void streamTest() {
         //stream无限流
-        Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);
+        //Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out::println);
         //只读取指定数量数据
         new Data().getList().stream().limit(10).forEach(System.out::println);
         //跳过指定数量
-        new Data().getList().stream().skip(2).forEach(System.out::println);
+        //new Data().getList().stream().skip(2).forEach(System.out::println);
         //去重
-        new Data().getList().stream().distinct().forEach(System.out::println);
+        //new Data().getList().stream().distinct().forEach(System.out::println);
 
 
     }
